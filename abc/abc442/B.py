@@ -14,12 +14,8 @@ for i in range(Q):
       else:
         volume -= 1
     case 3:
-      if is_playing == False:
-        is_playing = True
-      else:
-        is_playing = False
-  if volume >= 3 and is_playing == True:
+      is_playing = not is_playing
+  if volume >= 3 and is_playing:
     print("Yes")
   else:
     print("No")
-  count += 1
