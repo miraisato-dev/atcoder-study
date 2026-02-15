@@ -1,17 +1,8 @@
 n = int(input())
+S = [input() for _ in range(n)]
 
-m = 0
-s_list = []
+m = max(len(s) for s in S)
 
-for i in range(n):
-  s = (input())
-  s_list.append(s)
-  if m < len(s):
-    m = len(s)
-for k in s_list:
-  if len(k) < m:
-    dot = (m - len(k)) // 2
-    t = "." * dot + k + "." * dot
-    print(t)
-  else:
-    print(k)
+for s in S:
+    dot = (m - len(s)) // 2
+    print("." * dot + s + "." * dot)
